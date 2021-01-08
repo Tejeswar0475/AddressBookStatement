@@ -9,6 +9,8 @@ public class AddressBook {
 		AddressService addressService=new AddressService();
 		addressService.add();
 		addressService.display();
+		addressService.Edit();
+		addressService.display();
 
 	}
 

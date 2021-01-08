@@ -50,4 +50,45 @@ public class AddressService {
 		}
 	}
 
+	public void Edit()
+	{
+		String temp=null;
+		System.out.println("Enter the Phone number of the record u want to Edit");
+		temp=scanner.next();
+		if(book.isEmpty())
+		{
+			System.out.println("No records to edit");
+			return;
+		}
+		
+			for(int i=0;i<book.size();i++)
+			{
+				if(book.get(i).getFirstName().equals(temp))
+				{
+					InformationInput Info=new InformationInput();
+					
+					System.out.println(temp);
+					System.out.println("Enter First name:");
+					Info.setFirstName(scanner.next());
+					System.out.println("Enter last name:");
+					Info.setLastName(scanner.next());
+					System.out.println("Enter your address:");
+					Info.setAddress(scanner.next());
+					System.out.println("Enter your city:");
+					Info.setCity(scanner.next());
+					System.out.println("Enter your state:");
+					Info.setState(scanner.next());
+					System.out.println("Enter your ZIP code:");
+					Info.setZip(scanner.next());
+					System.out.println("Enter your phone number");
+					Info.setPhoneNumber(scanner.next());
+					System.out.println("Enter your Email");
+					Info.setEmailId(scanner.next());
+					book.remove(i);
+					book.add(i, Info);
+					break;
+				}
+				
+			}		
+	}
 }

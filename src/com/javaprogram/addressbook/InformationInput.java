@@ -87,7 +87,7 @@ public class InformationInput {
 		this.emailId=emailId;
 	}
 
-	public String getEmail()
+	public String getEmailId()
 	{
 		return emailId;
 	}
