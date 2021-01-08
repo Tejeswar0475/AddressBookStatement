@@ -92,6 +92,18 @@ public class InformationInput {
 		return emailId;
 	}
 	
+	public void copy(InformationInput temp)
+	{
+		this.address=temp.address;
+		this.firstName=temp.firstName;
+		this.lastName=temp.lastName;
+		this.city=temp.city;
+		this.state=temp.state;
+		this.zip=temp.zip;
+		this.phoneNumber=temp.phoneNumber;
+		this.emailId=temp.emailId;
+	}
+	
 	public String toString() {
 		return "InformationInput [firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", city=" + city
 				+ ", state=" + state + ", zip=" + zip + ", phone=" + phoneNumber + ", emailId=" + emailId +"]";

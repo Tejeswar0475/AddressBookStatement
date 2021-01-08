@@ -53,7 +53,7 @@ public class AddressService {
 	public void Edit()
 	{
 		String temp=null;
-		System.out.println("Enter the Phone number of the record u want to Edit");
+		System.out.println("Enter the First Name of the record u want to Edit");
 		temp=scanner.next();
 		if(book.isEmpty())
 		{
@@ -91,4 +91,26 @@ public class AddressService {
 				
 			}		
 	}
+	
+	public void Delete()
+	{
+		String temp=null;
+		System.out.println("Enter the First Name of the record u want ot delete");
+		temp=scanner.next();
+		if(book.isEmpty())
+		{
+			System.out.println("No records to delete");
+			return;
+		}
+		for(int i=0;i<book.size();i++)
+		{
+			if(book.get(i).getPhoneNumber().equals(temp))
+			{
+				book.remove(i);
+				break;
+			}
+		}
+	}
+	
+	
 }

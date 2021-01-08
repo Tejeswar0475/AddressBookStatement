@@ -11,6 +11,8 @@ public class AddressBook {
 		addressService.display();
 		addressService.Edit();
 		addressService.display();
+		addressService.Delete();
+		addressService.display();
 
 	}
 
