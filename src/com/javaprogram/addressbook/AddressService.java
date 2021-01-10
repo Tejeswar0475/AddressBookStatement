@@ -8,7 +8,6 @@ public class AddressService {
 	
 	ArrayList<InformationInput> book =new ArrayList<InformationInput>();
 	Scanner scanner = new Scanner(System.in);
-	
 	public void add()
 	{	
 		InformationInput Info = new InformationInput();
@@ -38,8 +37,6 @@ public class AddressService {
 		Info.setEmailId(scanner.next());
 	
 		book.add(Info);
-		
-	
 	}
 	
 	public void display()
@@ -50,7 +47,7 @@ public class AddressService {
 		}
 	}
 
-	public void Edit()
+	public void edit()
 	{
 		String temp=null;
 		System.out.println("Enter the First Name of the record u want to Edit");
@@ -92,7 +89,7 @@ public class AddressService {
 			}		
 	}
 	
-	public void Delete()
+	public void delete()
 	{
 		String temp=null;
 		System.out.println("Enter the First Name of the record u want ot delete");
@@ -104,7 +101,7 @@ public class AddressService {
 		}
 		for(int i=0;i<book.size();i++)
 		{
-			if(book.get(i).getPhoneNumber().equals(temp))
+			if(book.get(i).getFirstName().equals(temp))
 			{
 				book.remove(i);
 				break;
